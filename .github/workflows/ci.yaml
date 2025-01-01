@@ -1,0 +1,17 @@
+name: ci-wf
+on:
+  push:
+  branches:
+   - develop
+  pull_request:
+   branches:
+    - develop
+
+    jobs:
+      build_job:
+       run-on:ubuntu-latest
+       steps:
+        - name: welcome step
+          run: echo "welcome to git action"
+        - name: Checkout Repository
+          uses: action/checkout@v4
